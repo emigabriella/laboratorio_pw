@@ -1,1 +1,4 @@
 <p>caracteristica-component works!</p>
+<label for="item-input">Característica:</label>
+<input type="text" #nuevaCaracteristica>
+<button type="button" class="btn btn-outline-primary" (click)="agregar_caracteristica(nuevaCaracteristica.value)">Añadir Característica</button>
