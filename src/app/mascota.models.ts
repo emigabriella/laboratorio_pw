@@ -1,5 +1,5 @@
-export class datos{
-  n_dueño: string = "";
+export class mascota{
+  n_dueno: string = "";
   direccion : string = "";
   numero : number = 0;
   correo : string = "";
@@ -10,7 +10,7 @@ export class datos{
   color : string = "";
 
   constructor(
-    n_dueño: string,
+    n_dueno: string,
     direccion : string,
     numero : number,
     correo : string,
@@ -20,7 +20,7 @@ export class datos{
     raza : string,
     color : string,
   ){
-    this.n_dueño = n_dueño;
+    this.n_dueno = n_dueno;
     this.direccion = direccion;
     this.numero = numero;
     this.correo = correo;

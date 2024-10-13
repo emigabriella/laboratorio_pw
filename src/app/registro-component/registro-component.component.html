@@ -1,1 +1,71 @@
 <p>registro-component works!</p>
+<section class="content">
+  <div class="card">
+    <div class="card-header">
+      <h2>{{titulo}}</h2>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="n_dueno">Nombre del dueño:</label>
+                <input type="text" name="n_dueno" id="n_dueno" placeholder="Digite nombres" class="form-control" [(ngModel)]="cuadro_n_dueno">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="direccion">Direccion:</label>
+                <input type="text" name="direccion" id="direccion" placeholder="Digite direccion" class="form-control" [(ngModel)]="cuadro_direccion">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="numero">Numero de Contacto:</label>
+                <input type="number" name="numero" id="numero" placeholder="Digite numero de contacto" class="form-control" [(ngModel)]="cuadro_numero">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="correo">correo:</label>
+                <input type="text" name="correo" id="correo" placeholder="Digite correo" class="form-control" [(ngModel)]="cuadro_correo">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="n_mascotas">Nombre de mascota</label>
+                <input type="text" name="n_mascotas" id="n_mascotas" placeholder="Digite nombre de mascota" class="form-control" [(ngModel)]="cuadro_n_mascota">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="tipo_mascota">Tipo de mascota:</label>
+                <input type="text" name="tipo_mascota" id="tipo_mascota" placeholder="Digite que tipo de mascota" class="form-control" [(ngModel)]="cuadro_tipo_mascota">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" id="edad" placeholder="Digite edad" class="form-control" [(ngModel)]="cuadro_edad">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="raza">Raza:</label>
+                <input type="text" name="raza" id="raza" placeholder="Digite Raza" class="form-control" [(ngModel)]="cuadro_raza">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="color">color:</label>
+                <input type="text" name="color" id="color" placeholder="Digite color" class="form-control" [(ngModel)]="cuadro_color">
+              </div>
+              <div class="form-group col-md-6">
+              <button type="submit" class="btn btn-outline-primary btn-block">Guardar
+              </button>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="text-align: center;">
+  <button class="btn btn-primary" (click)="volverDatos()">Regresar</button>
+</div>
+

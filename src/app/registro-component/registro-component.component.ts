@@ -1,12 +1,63 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { mascota } from '../mascota.models';
+import { mascotasService } from '../mascotas.service';
 
 @Component({
   selector: 'app-registro-component',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
+  providers: [Router],
   templateUrl: './registro-component.component.html',
   styleUrl: './registro-component.component.css'
 })
-export class RegistroComponentComponent {
+export class RegistroComponentComponent implements OnInit{
+  volverDatos(){
+    this.router.navigate(['']);
+  }
 
+  titulo = 'Registro de Mascotas';
+
+  mascotas!: mascota[];
+
+  cuadro_n_dueno: string = "";
+  cuadro_direccion : string = "";
+  cuadro_numero : number = 0;
+  cuadro_correo : string = "";
+  cuadro_n_mascota : string = "";
+  cuadro_tipo_mascota : string = "";
+  cuadro_edad : number = 0;
+  cuadro_raza : string = "";
+  cuadro_color : string = "";
+
+  constructor(private router: Router, private mascotasService: mascotasService){
+    //this.mascotas = this.mascotasService.mascotas;
+  }
+
+  ngOnInit(): void {
+    this.mascotas = this.mascotasService.mascotas;
+  }
+
+  guardar_empleado(){
+    //if
+    let miMascota = new mascota(this.cuadro_n_dueno,this.cuadro_direccion,this.cuadro_numero,
+    this.cuadro_correo,this.cuadro_n_mascota,this.cuadro_tipo_mascota,this.cuadro_edad,
+    this.cuadro_raza,this.cuadro_color);
+
+    //this.miServicio.muestra_mensaje("Registro realizado exitosamente");
+
+    //this.mascotas.push(mimascota);
+    this.mascotasService.agregar_mascota_servicio(miMascota);
+
+    this.cuadro_n_dueno="";
+    this.cuadro_direccion="";
+    this.cuadro_numero=0;
+    this.cuadro_correo="";
+    this.cuadro_n_mascota="";
+    this.cuadro_tipo_mascota="";
+    this.cuadro_edad=0;
+    this.cuadro_raza="";
+    this.cuadro_color="";
+  }
 }

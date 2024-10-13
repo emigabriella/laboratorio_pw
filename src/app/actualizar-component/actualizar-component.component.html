@@ -1,9 +1,8 @@
 <p>actualizar-component works!</p>
-<!--formulario-->
 <section class="content">
   <div class="card">
     <div class="card-header">
-      <h2></h2>
+      <h2>{{titulo}}</h2>
     </div>
     <div class="card-body">
       <div class="row">
@@ -11,8 +10,8 @@
           <form>
             <div class="row">
               <div class="form-group col-md-6">
-                <label for="n_dueño">Nombre del dueño:</label>
-                <input type="text" name="n_dueño" id="n_dueño" placeholder="Digite nombres" class="form-control" [(ngModel)]="cuadro_n_dueño">
+                <label for="n_dueno">Nombre del dueño:</label>
+                <input type="text" name="n_dueno" id="n_dueno" placeholder="Digite nombres" class="form-control" [(ngModel)]="cuadro_n_dueno">
               </div>
               <div class="form-group col-md-6">
                 <label for="direccion">Direccion:</label>
@@ -32,7 +31,7 @@
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="n_mascotas">Nombre de mascota</label>
-                <input type="text" name="n_mascotas" id="n_mascotas" placeholder="Digite nombre de mascota" class="form-control" [(ngModel)]="cuadro_n_mascotas">
+                <input type="text" name="n_mascotas" id="n_mascotas" placeholder="Digite nombre de mascota" class="form-control" [(ngModel)]="cuadro_n_mascota">
               </div>
               <div class="form-group col-md-6">
                 <label for="tipo_mascota">Tipo de mascota:</label>
@@ -55,7 +54,7 @@
                 <input type="text" name="color" id="color" placeholder="Digite color" class="form-control" [(ngModel)]="cuadro_color">
               </div>
               <div class="form-group col-md-6">
-              <button type="submit" class="btn btn-outline-primary btn-block">Guardar
+              <button type="submit" class="btn btn-outline-primary btn-block">Actualizar
               </button>
             </div>
             </div>
