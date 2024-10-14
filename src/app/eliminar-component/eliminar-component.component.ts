@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ServicioMascotaService } from '../servicio-mascota.service';
 import { mascota } from '../mascota.models';
 import { FormsModule } from '@angular/forms';
@@ -38,26 +38,16 @@ export class EliminarComponentComponent implements OnInit{
   mensajeEliminar: string = '';
 
   constructor(private router: Router, private mascotasService: mascotasService, private route: ActivatedRoute){
-    //this.mascotas = this.mascotasService.mascotas;
+
   }
 
   ngOnInit(): void {
-    this.indice = this.route.snapshot.params['id'];
-    let mascota: mascota = this.mascotasService.encontrar_mascota(this.indice);
-    this.cuadro_n_dueno=mascota.n_dueno;
-    this.cuadro_direccion=mascota.direccion;
-    this.cuadro_numero=mascota.numero;
-    this.cuadro_correo=mascota.correo;
-    this.cuadro_n_mascota=mascota.n_mascota;
-    this.cuadro_tipo_mascota=mascota.tipo_mascota;
-    this.cuadro_edad=mascota.edad;
-    this.cuadro_raza=mascota.raza;
+    this.mascotas = this.mascotasService.mascotas;
   }
 
 
   eliminar_mascota(){
     this.mascotasService.eliminar_mascota(this.indice);
-    this.mensajeEliminar = 'El registro ha sido eliminado con exito.';
     this.router.navigate(['']);
   }
 }

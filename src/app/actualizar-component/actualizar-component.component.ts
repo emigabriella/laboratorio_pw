@@ -8,9 +8,9 @@ import { mascota } from '../mascota.models';
   selector: 'app-actualizar-component',
   standalone: true,
   imports: [FormsModule],
-  providers:[],
+  providers:[Router],
   templateUrl: './actualizar-component.component.html',
-  styleUrl: './actualizar-component.component.css'
+  styleUrls: ['./actualizar-component.component.css']
 })
 export class ActualizarComponentComponent implements OnInit{
   volverDatos(){
@@ -32,9 +32,8 @@ export class ActualizarComponentComponent implements OnInit{
 
   indice!: number;
 
-  constructor(private router: Router, private mascotasService: mascotasService, private route: ActivatedRoute){
-    //this.mascotas = this.mascotasService.mascotas;
-  }
+  constructor(private router: Router, private mascotasService: mascotasService, private route: ActivatedRoute) { }
+
 
   ngOnInit(): void {
     this.indice = this.route.snapshot.params['id'];
@@ -51,13 +50,10 @@ export class ActualizarComponentComponent implements OnInit{
 
   actualizar_mascota(){
     //if
-    let miMascota = new mascota(this.cuadro_n_dueno,this.cuadro_direccion,this.cuadro_numero,
-    this.cuadro_correo,this.cuadro_n_mascota,this.cuadro_tipo_mascota,this.cuadro_edad,
+    let miMascota = new mascota(this.cuadro_n_dueno, this.cuadro_direccion, this.cuadro_numero,
+    this.cuadro_correo, this.cuadro_n_mascota, this.cuadro_tipo_mascota, this.cuadro_edad,
     this.cuadro_raza);
 
-    //this.miServicio.muestra_mensaje("Registro realizado exitosamente");
-
-    //this.mascotas.push(mimascota);
     this.mascotasService.actualizar_mascota(this.indice, miMascota);
 
     this.router.navigate(['']);

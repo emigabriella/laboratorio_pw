@@ -30,7 +30,7 @@ export class DatosComponentComponent implements OnInit{
   cuadro_raza : string = "";
 
   constructor(private miServicio: ServicioMascotaService, private mascotasService: mascotasService){
-    //this.mascotas = this.mascotasService.mascotas;
+
   }
 
   ngOnInit(): void {
@@ -44,9 +44,6 @@ export class DatosComponentComponent implements OnInit{
     this.cuadro_correo,this.cuadro_n_mascota,this.cuadro_tipo_mascota,this.cuadro_edad,
     this.cuadro_raza);
 
-    //this.miServicio.muestra_mensaje("Registro realizado exitosamente");
-
-    //this.mascotas.push(mimascota);
     this.mascotasService.agregar_mascota(miMascota);
 
     this.cuadro_n_dueno="";

@@ -2,15 +2,16 @@
 <div class="container">
   <div class="row">
       <div class="col">
-        -----------------------------------------------------------------
           <div>
               <a [routerLink]="['actualizar', indice]">
                   # {{indice+1}} <br></a>
+                <b>Datos de Dueño:</b><br>
                  <b>Nombre del Dueño: </b>{{mascotaLista.n_dueno}} <br>
                  <b>Direccion: </b>{{mascotaLista.direccion}} <br>
                  <b>Numero de contacto: </b>{{mascotaLista.numero}} <br>
                  <b>Correo: </b>{{mascotaLista.correo}} <br>
-
+                <br>
+                <b>Datos de la mascota:</b><br>
                  <b>Nombre de la mascota: </b>{{mascotaLista.n_mascota}} <br>
                  <b>Tipo de mascota: </b>{{mascotaLista.tipo_mascota}} <br>
                  <b>Edad (en meses): </b>{{mascotaLista.edad}} <br>
@@ -22,7 +23,8 @@
                   {{ caracteristica }}
               </li>
           </ul>
-          <app-eliminar-component></app-eliminar-component>
+          <app-eliminar-component></app-eliminar-component><br>
+        -----------------------------------------------------------------------
       </div>
   </div>
 </div>
