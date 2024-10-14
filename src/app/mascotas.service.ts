@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core";
 import { mascota } from "./mascota.models";
 import { ServicioMascotaService } from "./servicio-mascota.service";
-import { BehaviorSubject, Observable } from "rxjs";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class mascotasService{
   mascotas: mascota []=[
-    new mascota('Rosa','Florencia',12345678,'rosa@gmail.com','hachy','perro',5,'husky','negro con blanco')
+    new mascota('Rosa Carrillo','Lotificacion Florencia',12345678,'rosa@gmail.com','hachy','perro',5,'husky')
   ];
 
   private mascotasSubject: BehaviorSubject<mascota[]>= new BehaviorSubject(this.mascotas);
@@ -35,7 +35,6 @@ export class mascotasService{
       mascotaModificado.tipo_mascota = mascota.tipo_mascota;
       mascotaModificado.edad = mascota.edad;
       mascotaModificado.raza = mascota.raza;
-      mascotaModificado.color = mascota.color;
     }
 
 

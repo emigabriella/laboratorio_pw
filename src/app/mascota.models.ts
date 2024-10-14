@@ -7,10 +7,8 @@ export class mascota{
   tipo_mascota : string = "";
   edad : number = 0;
   raza : string = "";
-  color : string = "";
 
-
-  constructor(
+ constructor(
     n_dueno: string,
     direccion : string,
     numero : number,
@@ -19,7 +17,6 @@ export class mascota{
     tipo_mascota : string,
     edad : number,
     raza : string,
-    color : string,
   ){
     this.n_dueno = n_dueno;
     this.direccion = direccion;
@@ -29,6 +26,5 @@ export class mascota{
     this.tipo_mascota = tipo_mascota;
     this.edad = edad;
     this.raza = raza;
-    this.color = color;
   }
 }

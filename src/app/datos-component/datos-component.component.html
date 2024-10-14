@@ -5,6 +5,9 @@
     </div>
     <div class="card-body">
       <div class="row">
+        <h4>Datos del Dueño:</h4>
+      </div>
+      <div class="row">
         <div class="col-md-6">
           <form class="form">
             <div class="row">
@@ -28,6 +31,9 @@
               </div>
             </div>
             <div class="row">
+              <h4>Datos de la mascota:</h4>
+            </div>
+            <div class="row">
               <div class="form-group col-md-6">
                 <label for="n_mascotas">Nombre de mascota</label>
                 <input type="text" name="n_mascotas" id="n_mascotas" placeholder="Digite nombre de mascota" class="form-control" [(ngModel)]="cuadro_n_mascota">
@@ -39,18 +45,12 @@
             </div>
             <div class="row">
               <div class="form-group col-md-6">
-                <label for="edad">Edad:</label>
+                <label for="edad">Edad (meses):</label>
                 <input type="number" name="edad" id="edad" placeholder="Digite edad" class="form-control" [(ngModel)]="cuadro_edad">
               </div>
               <div class="form-group col-md-6">
                 <label for="raza">Raza:</label>
                 <input type="text" name="raza" id="raza" placeholder="Digite Raza" class="form-control" [(ngModel)]="cuadro_raza">
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label for="color">color:</label>
-                <input type="text" name="color" id="color" placeholder="Digite color" class="form-control" [(ngModel)]="cuadro_color">
               </div>
             </div>
             <div>

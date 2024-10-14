@@ -32,7 +32,6 @@ export class EliminarComponentComponent implements OnInit{
   cuadro_tipo_mascota : string = "";
   cuadro_edad : number = 0;
   cuadro_raza : string = "";
-  cuadro_color : string = "";
 
   indice!: number;
 
@@ -53,7 +52,6 @@ export class EliminarComponentComponent implements OnInit{
     this.cuadro_tipo_mascota=mascota.tipo_mascota;
     this.cuadro_edad=mascota.edad;
     this.cuadro_raza=mascota.raza;
-    this.cuadro_color=mascota.color;
   }
 
 

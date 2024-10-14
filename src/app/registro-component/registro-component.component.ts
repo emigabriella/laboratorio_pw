@@ -29,7 +29,6 @@ export class RegistroComponentComponent implements OnInit{
   cuadro_tipo_mascota : string = "";
   cuadro_edad : number = 0;
   cuadro_raza : string = "";
-  cuadro_color : string = "";
 
   constructor(private router: Router, private mascotasService: mascotasService){
     //this.mascotas = this.mascotasService.mascotas;
@@ -43,7 +42,7 @@ export class RegistroComponentComponent implements OnInit{
     //if
     let miMascota = new mascota(this.cuadro_n_dueno,this.cuadro_direccion,this.cuadro_numero,
     this.cuadro_correo,this.cuadro_n_mascota,this.cuadro_tipo_mascota,this.cuadro_edad,
-    this.cuadro_raza,this.cuadro_color);
+    this.cuadro_raza);
 
     //this.miServicio.muestra_mensaje("Registro realizado exitosamente");
 
@@ -60,6 +59,5 @@ export class RegistroComponentComponent implements OnInit{
     this.cuadro_tipo_mascota="";
     this.cuadro_edad=0;
     this.cuadro_raza="";
-    this.cuadro_color="";
   }
 }

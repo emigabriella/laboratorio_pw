@@ -29,7 +29,6 @@ export class ActualizarComponentComponent implements OnInit{
   cuadro_tipo_mascota : string = "";
   cuadro_edad : number = 0;
   cuadro_raza : string = "";
-  cuadro_color : string = "";
 
   indice!: number;
 
@@ -48,14 +47,13 @@ export class ActualizarComponentComponent implements OnInit{
     this.cuadro_tipo_mascota=mascota.tipo_mascota;
     this.cuadro_edad=mascota.edad;
     this.cuadro_raza=mascota.raza;
-    this.cuadro_color=mascota.color;
   }
 
   actualizar_mascota(){
     //if
     let miMascota = new mascota(this.cuadro_n_dueno,this.cuadro_direccion,this.cuadro_numero,
     this.cuadro_correo,this.cuadro_n_mascota,this.cuadro_tipo_mascota,this.cuadro_edad,
-    this.cuadro_raza,this.cuadro_color);
+    this.cuadro_raza);
 
     //this.miServicio.muestra_mensaje("Registro realizado exitosamente");
 
@@ -72,6 +70,5 @@ export class ActualizarComponentComponent implements OnInit{
     this.cuadro_tipo_mascota="";
     this.cuadro_edad=0;
     this.cuadro_raza="";
-    this.cuadro_color="";
   }
 }
