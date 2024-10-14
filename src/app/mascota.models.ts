@@ -9,6 +9,7 @@ export class mascota{
   raza : string = "";
   color : string = "";
 
+
   constructor(
     n_dueno: string,
     direccion : string,

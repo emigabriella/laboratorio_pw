@@ -39,7 +39,7 @@ export class RegistroComponentComponent implements OnInit{
     this.mascotas = this.mascotasService.mascotas;
   }
 
-  guardar_empleado(){
+  guardar_mascota(){
     //if
     let miMascota = new mascota(this.cuadro_n_dueno,this.cuadro_direccion,this.cuadro_numero,
     this.cuadro_correo,this.cuadro_n_mascota,this.cuadro_tipo_mascota,this.cuadro_edad,
@@ -48,7 +48,9 @@ export class RegistroComponentComponent implements OnInit{
     //this.miServicio.muestra_mensaje("Registro realizado exitosamente");
 
     //this.mascotas.push(mimascota);
-    this.mascotasService.agregar_mascota_servicio(miMascota);
+    this.mascotasService.agregar_mascota(miMascota);
+
+    this.router.navigate(['']);
 
     this.cuadro_n_dueno="";
     this.cuadro_direccion="";

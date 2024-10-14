@@ -1,18 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, } from '@angular/core';
+import { ServicioMascotaService } from '../servicio-mascota.service';
+import { mascota } from '../mascota.models';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { mascotasService } from '../mascotas.service';
-import { mascota } from '../mascota.models';
+
 
 @Component({
-  selector: 'app-actualizar-component',
+  selector: 'app-eliminar-component',
   standalone: true,
-  imports: [FormsModule],
-  providers:[],
-  templateUrl: './actualizar-component.component.html',
-  styleUrl: './actualizar-component.component.css'
+  imports: [FormsModule,],
+  providers :[ServicioMascotaService, Router],
+  templateUrl: './eliminar-component.component.html',
+  styleUrl: './eliminar-component.component.css'
 })
-export class ActualizarComponentComponent implements OnInit{
+export class EliminarComponentComponent implements OnInit{
+
   volverDatos(){
     this.router.navigate(['']);
   }
@@ -33,6 +36,8 @@ export class ActualizarComponentComponent implements OnInit{
 
   indice!: number;
 
+  mensajeEliminar: string = '';
+
   constructor(private router: Router, private mascotasService: mascotasService, private route: ActivatedRoute){
     //this.mascotas = this.mascotasService.mascotas;
   }
@@ -51,27 +56,10 @@ export class ActualizarComponentComponent implements OnInit{
     this.cuadro_color=mascota.color;
   }
 
-  actualizar_mascota(){
-    //if
-    let miMascota = new mascota(this.cuadro_n_dueno,this.cuadro_direccion,this.cuadro_numero,
-    this.cuadro_correo,this.cuadro_n_mascota,this.cuadro_tipo_mascota,this.cuadro_edad,
-    this.cuadro_raza,this.cuadro_color);
 
-    //this.miServicio.muestra_mensaje("Registro realizado exitosamente");
-
-    //this.mascotas.push(mimascota);
-    this.mascotasService.actualizar_mascota(this.indice, miMascota);
-
+  eliminar_mascota(){
+    this.mascotasService.eliminar_mascota(this.indice);
+    this.mensajeEliminar = 'El registro ha sido eliminado con exito.';
     this.router.navigate(['']);
-
-    this.cuadro_n_dueno="";
-    this.cuadro_direccion="";
-    this.cuadro_numero=0;
-    this.cuadro_correo="";
-    this.cuadro_n_mascota="";
-    this.cuadro_tipo_mascota="";
-    this.cuadro_edad=0;
-    this.cuadro_raza="";
-    this.cuadro_color="";
   }
 }

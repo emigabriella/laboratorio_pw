@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { mascota } from "./mascota.models";
 import { ServicioMascotaService } from "./servicio-mascota.service";
+import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +11,12 @@ export class mascotasService{
     new mascota('Rosa','Florencia',12345678,'rosa@gmail.com','hachy','perro',5,'husky','negro con blanco')
   ];
 
+  private mascotasSubject: BehaviorSubject<mascota[]>= new BehaviorSubject(this.mascotas);
+
   constructor(private servicioMensaje: ServicioMascotaService){}
 
-    agregar_mascota_servicio(mascota:mascota){
-      this.servicioMensaje.muestra_mensaje("nombre ingresado: " + mascota.n_mascota);
+    agregar_mascota(mascota:mascota){
+      this.servicioMensaje.muestra_mensaje("Registro ingresado: " + mascota.n_dueno);
       this.mascotas.push(mascota);
     }
 
@@ -33,5 +36,11 @@ export class mascotasService{
       mascotaModificado.edad = mascota.edad;
       mascotaModificado.raza = mascota.raza;
       mascotaModificado.color = mascota.color;
+    }
+
+
+    eliminar_mascota(indice: number){
+      this.servicioMensaje.muestra_mensaje("Registro eliminado exitosamente: ");
+      this.mascotas.splice(indice,1);
     }
 }

@@ -15,6 +15,7 @@ import { mascotasService } from '../mascotas.service';
   styleUrl: './datos-component.component.css'
 })
 export class DatosComponentComponent implements OnInit{
+
   titulo = 'Registro de Mascotas';
 
   mascotas!: mascota[];
@@ -37,7 +38,7 @@ export class DatosComponentComponent implements OnInit{
     this.mascotas = this.mascotasService.mascotas;
   }
 
-  guardar_empleado(){
+  guardar_mascota(){
     //if
     let miMascota = new mascota(this.cuadro_n_dueno,this.cuadro_direccion,this.cuadro_numero,
 
@@ -47,7 +48,7 @@ export class DatosComponentComponent implements OnInit{
     //this.miServicio.muestra_mensaje("Registro realizado exitosamente");
 
     //this.mascotas.push(mimascota);
-    this.mascotasService.agregar_mascota_servicio(miMascota);
+    this.mascotasService.agregar_mascota(miMascota);
 
     this.cuadro_n_dueno="";
     this.cuadro_direccion="";

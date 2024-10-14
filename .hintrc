@@ -9,13 +9,12 @@
         "label": "off"
       }
     ],
-    "axe/text-alternatives": [
+    "no-inline-styles": "off",
+    "axe/structure": [
       "default",
       {
-        "image-alt": "off"
+        "list": "off"
       }
-    ],
-    "no-inline-styles": "off",
-    "button-type": "off"
+    ]
   }
 }
