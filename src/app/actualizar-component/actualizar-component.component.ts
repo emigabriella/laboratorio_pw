@@ -31,11 +31,13 @@ export class ActualizarComponentComponent implements OnInit{
   cuadro_raza : string = "";
 
   indice!: number;
+  accion!: number;
 
   constructor(private router: Router, private mascotasService: mascotasService, private route: ActivatedRoute) { }
 
 
   ngOnInit(): void {
+    this.accion =parseInt(this.route.snapshot.queryParams['accion'])
     this.indice = this.route.snapshot.params['id'];
     let mascota: mascota = this.mascotasService.encontrar_mascota(this.indice);
     this.cuadro_n_dueno=mascota.n_dueno;
@@ -48,23 +50,18 @@ export class ActualizarComponentComponent implements OnInit{
     this.cuadro_raza=mascota.raza;
   }
 
-  actualizar_mascota(){
-    //if
+  accion_mascota(){
+    if(this.accion == 1){
     let miMascota = new mascota(this.cuadro_n_dueno, this.cuadro_direccion, this.cuadro_numero,
     this.cuadro_correo, this.cuadro_n_mascota, this.cuadro_tipo_mascota, this.cuadro_edad,
     this.cuadro_raza);
 
     this.mascotasService.actualizar_mascota(this.indice, miMascota);
-
-    this.router.navigate(['']);
-
-    this.cuadro_n_dueno="";
-    this.cuadro_direccion="";
-    this.cuadro_numero=0;
-    this.cuadro_correo="";
-    this.cuadro_n_mascota="";
-    this.cuadro_tipo_mascota="";
-    this.cuadro_edad=0;
-    this.cuadro_raza="";
+}else {
+  this.mascotasService.eliminar_mascota(this.indice);
+}
+    setTimeout(() =>{
+      this.router.navigate(['']);
+    }, 500);
   }
 }

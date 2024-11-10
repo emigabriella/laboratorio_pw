@@ -9,7 +9,7 @@ import { EliminarComponentComponent } from "../eliminar-component/eliminar-compo
 @Component({
   selector: 'app-mascota-component',
   standalone: true,
-  imports: [CaracteristicasMascotaComponentComponent, CommonModule, RouterModule, EliminarComponentComponent],
+  imports: [CaracteristicasMascotaComponentComponent, CommonModule, RouterModule],
   templateUrl: './mascota-component.component.html',
   styleUrl: './mascota-component.component.css'
 })
