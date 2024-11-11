@@ -23,7 +23,7 @@ export class DataServices{
         let url = "https://gabriela-ortiz-ing-79e23-default-rtdb.firebaseio.com/navidad/" + indice + ".json";
 
         this.httpClient.put(url, mascota).subscribe(
-            response =>console.log("Se ha actualizado el empleado " + response),
+            response =>console.log("Se ha actualizado datos de " + response),
             error =>console.log("Error: "+ error)
         );
     }
@@ -32,7 +32,7 @@ export class DataServices{
         let url = "https://gabriela-ortiz-ing-79e23-default-rtdb.firebaseio.com/navidad/" + indice + ".json";
 
         this.httpClient.delete(url).subscribe(
-            response => console.log("Se ha eliminado el empleado " + response),
+            response => console.log("Se ha eliminado los datos " + response),
             error => console.log("Error: " + error)
         );
     }

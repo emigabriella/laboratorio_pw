@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { mascota } from '../mascota.models';
 import { CaracteristicasMascotaComponentComponent } from '../caracteristicas-mascota-component/caracteristicas-mascota-component.component';
-import { EliminarComponentComponent } from "../eliminar-component/eliminar-component.component";
 
 
 @Component({
