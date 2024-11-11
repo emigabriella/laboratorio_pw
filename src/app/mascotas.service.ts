@@ -27,7 +27,7 @@ mascotas : mascota[]=[];
     }
 
     actualizar_mascota(indice: number, mascota:mascota){
-      this.servicioMensaje.muestra_mensaje("Actualizacion Exitosa");
+
       let mascotaAct = this.mascotas[indice];
       mascotaAct.n_dueno = mascota.n_dueno;
       mascotaAct.direccion = mascota.direccion;

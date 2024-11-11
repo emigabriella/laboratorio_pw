@@ -1,3 +1,46 @@
+<div class="container">
+  <h1>Eliminar datos</h1>
+        <img class="card-img-top" src="https://imagenes.eltiempo.com/files/image_1200_600/uploads/2024/02/06/65c2571787327.jpeg">
+          <h4 class="card-title">Datos del dueño</h4>
+              <form class="form-group row">
+                <div class="form-group col-md-3">
+                    <label for="n_dueno">Nombre del dueño:</label>
+                    <input type="text" name="n_dueno" id="n_dueno" placeholder="Digite nombre del dueño" class="form-control" [(ngModel)]="cuadro_n_dueno" readonly>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="direccion">Direccion:</label>
+                    <input type="text" name="direccion" id="direccion" placeholder="Digite direccion" class="form-control" [(ngModel)]="cuadro_direccion" readonly>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="numero">Numero de Contacto:</label>
+                    <input type="number" name="numero" id="numero" placeholder="Digite numero de contacto" class="form-control" [(ngModel)]="cuadro_numero" readonly>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="correo">correo:</label>
+                    <input type="text" name="correo" id="correo" placeholder="Digite correo" class="form-control" [(ngModel)]="cuadro_correo" readonly>
+                  </div><h4 class="card-title">Datos de la mascota:</h4>
 
-<button type="button" class="btn btn-outline-danger" (click)="eliminar_mascota()">eliminar registro</button>
+                  <div class="form-group row">
 
+
+                  <div class="form-group col-md-3">
+                    <label for="n_mascotas">Nombre de mascota</label>
+                    <input type="text" name="n_mascotas" id="n_mascotas" placeholder="Digite nombre de mascota" class="form-control" [(ngModel)]="cuadro_n_mascota" readonly>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="tipo_mascota">Tipo de mascota:</label>
+                    <input type="text" name="tipo_mascota" id="tipo_mascota" placeholder="Digite que tipo de mascota" class="form-control" [(ngModel)]="cuadro_tipo_mascota" readonly>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="edad">Edad (meses):</label>
+                    <input type="number" name="edad" id="edad" placeholder="Digite edad" class="form-control" [(ngModel)]="cuadro_edad" readonly>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="raza">Raza:</label>
+                    <input type="text" name="raza" id="raza" placeholder="Digite Raza" class="form-control" [(ngModel)]="cuadro_raza" readonly>
+                  </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                  <button type="button" class="btn btn-outline-danger" (click)="eliminar_mascota()">eliminar registro</button>
+              </div>
+            </form>
