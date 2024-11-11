@@ -5,43 +5,67 @@
                   <form class="form-group row">
                     <div class="form-group col-md-3">
                         <label for="n_dueno">Nombre del dueño:</label>
-                        <input type="text" name="n_dueno" id="n_dueno" placeholder="Digite nombre del dueño" class="form-control" [(ngModel)]="cuadro_n_dueno">
+                        <input type="text" name="n_dueno" id="n_dueno" placeholder="Digite nombre del dueño" class="form-control" [(ngModel)]="cuadro_n_dueno" required #nombreCampo="ngModel">
+                        <div *ngIf="nombreCampo.invalid && nombreCampo.touched">
+
+                        </div>
                       </div>
                       <div class="form-group col-md-3">
                         <label for="direccion">Direccion:</label>
-                        <input type="text" name="direccion" id="direccion" placeholder="Digite direccion" class="form-control" [(ngModel)]="cuadro_direccion">
+                        <input type="text" name="direccion" id="direccion" placeholder="Digite direccion" class="form-control" [(ngModel)]="cuadro_direccion" required #nombreCampo="ngModel">
+                        <div *ngIf="nombreCampo.invalid && nombreCampo.touched">
+
+                        </div>
                       </div>
                       <div class="form-group col-md-3">
                         <label for="numero">Numero de Contacto:</label>
-                        <input type="number" name="numero" id="numero" placeholder="Digite numero de contacto" class="form-control" [(ngModel)]="cuadro_numero">
+                        <input type="number" name="numero" id="numero" placeholder="Digite numero de contacto" class="form-control" [(ngModel)]="cuadro_numero" required #nombreCampo="ngModel">
+                        <div *ngIf="nombreCampo.invalid && nombreCampo.touched">
+
+                        </div>
                       </div>
                       <div class="form-group col-md-3">
                         <label for="correo">correo:</label>
-                        <input type="text" name="correo" id="correo" placeholder="Digite correo" class="form-control" [(ngModel)]="cuadro_correo">
+                        <input type="text" name="correo" id="correo" placeholder="Digite correo" class="form-control" [(ngModel)]="cuadro_correo" required #nombreCampo="ngModel">
+                        <div *ngIf="nombreCampo.invalid && nombreCampo.touched">
+
+                        </div>
                       </div>
                   </form>
                     <h4 class="card-title">Datos de la mascota:</h4>
                     <form class="form-group row">
                       <div class="form-group col-md-3">
                         <label for="n_mascotas">Nombre de mascota</label>
-                        <input type="text" name="n_mascotas" id="n_mascotas" placeholder="Digite nombre de mascota" class="form-control" [(ngModel)]="cuadro_n_mascota">
+                        <input type="text" name="n_mascotas" id="n_mascotas" placeholder="Digite nombre de mascota" class="form-control" [(ngModel)]="cuadro_n_mascota" required #nombreCampo="ngModel">
+                        <div *ngIf="nombreCampo.invalid && nombreCampo.touched">
+
+                        </div>
                       </div>
                       <div class="form-group col-md-3">
                         <label for="tipo_mascota">Tipo de mascota:</label>
-                        <input type="text" name="tipo_mascota" id="tipo_mascota" placeholder="Digite que tipo de mascota" class="form-control" [(ngModel)]="cuadro_tipo_mascota">
+                        <input type="text" name="tipo_mascota" id="tipo_mascota" placeholder="Digite que tipo de mascota" class="form-control" [(ngModel)]="cuadro_tipo_mascota" required #nombreCampo="ngModel">
+                        <div *ngIf="nombreCampo.invalid && nombreCampo.touched">
+
+                        </div>
                       </div>
                       <div class="form-group col-md-3">
                         <label for="edad">Edad (meses):</label>
-                        <input type="number" name="edad" id="edad" placeholder="Digite edad" class="form-control" [(ngModel)]="cuadro_edad">
+                        <input type="number" name="edad" id="edad" placeholder="Digite edad" class="form-control" [(ngModel)]="cuadro_edad" required #nombreCampo="ngModel">
+                        <div *ngIf="nombreCampo.invalid && nombreCampo.touched">
+
+                        </div>
                       </div>
                       <div class="form-group col-md-3">
                         <label for="raza">Raza:</label>
-                        <input type="text" name="raza" id="raza" placeholder="Digite Raza" class="form-control" [(ngModel)]="cuadro_raza">
+                        <input type="text" name="raza" id="raza" placeholder="Digite Raza" class="form-control" [(ngModel)]="cuadro_raza" required #nombreCampo="ngModel">
+                        <div *ngIf="nombreCampo.invalid && nombreCampo.touched">
+
+                        </div>
                       </div>
 
 
                       <div class="form-group col-md-12">
-                      <button type="submit" class="btn btn-outline-primary btn-block" (click)="guardar_mascota()">Guardar
+                      <button type="submit" class="btn btn-outline-primary btn-block" (click)="guardar_mascota()" [disabled]="!nombreCampo.valid">Guardar
                       </button>
                     </div>
 

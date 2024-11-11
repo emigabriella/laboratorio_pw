@@ -13,6 +13,8 @@ export class mascotasService{
   ];*/
 mascotas : mascota[]=[];
 
+
+
   constructor(private servicioMensaje: ServicioMascotaService, private dataService: DataServices){}
 
     agregar_mascota(mascota:mascota){
@@ -49,11 +51,11 @@ mascotas : mascota[]=[];
       this.dataService.guardar_arreglo(this.mascotas);
     }
 
-    obtener_empleado(){
+    obtener_mascota(){
       return this.dataService.cargar_arreglo();
     }
 
-    set_empleado(misMascotas: mascota[]){
+    /*set_mascota(misMascotas: mascota[]){
       this.mascotas = misMascotas;
-    }
+    }*/
 }

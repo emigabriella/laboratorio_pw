@@ -19,6 +19,7 @@ export class MascotaComponentComponent {
   @Input()
   indice!: number;
   array_caracteristicas = [''];
+mascota: any;
 
   agregar_caracteristica(caracteristica:string){
     this.array_caracteristicas.push(caracteristica);
