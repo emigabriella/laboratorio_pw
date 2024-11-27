@@ -1,16 +1,19 @@
-<div class="container mt-5">
-  <div class="form-row text-center">
-      <h3 class="text-center">Inicio de Sesión</h3>
+<div class="card horizontal-card">
+  <img src="https://w7.pngwing.com/pngs/459/678/png-transparent-dog-cartoon-mascot-pet-shop-logo-thumbnail.png" class="card-img-left" alt="Descripción de la imagen">
+  <div class="card-body">
+    <br><br><br>
+    <h5 class="card-title">INICIAR SESION</h5>
+    <br><br><br>
+    <form #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+      <div class="form-group">
+        <label>Correo Electrónico:</label>
+        <input type="email" class="form-control" name="email" ngModel>
+    </div>
+    <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" class="form-control" name="password" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+</form>
   </div>
-  <form #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
-      <div class="form-group">
-          <label>Correo Electrónico:</label>
-          <input type="email" class="form-control" name="email" ngModel>
-      </div>
-      <div class="form-group">
-          <label>Contraseña</label>
-          <input type="password" class="form-control" name="password" ngModel>
-      </div>
-      <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-  </form>
-</div>
+
