@@ -15,6 +15,8 @@ import { mascotasService } from '../mascotas.service';
   styleUrl: './eliminar-component.component.css'
 })
 export class EliminarComponentComponent implements OnInit{
+[x: string]: any;
+
 
   volverDatos(){
     this.router.navigate(['']);
@@ -35,6 +37,7 @@ export class EliminarComponentComponent implements OnInit{
 
   indice!: number;
 
+
   mensajeEliminar: string = '';
 
   constructor(private router: Router, private mascotasService: mascotasService, private route: ActivatedRoute){
@@ -44,7 +47,6 @@ export class EliminarComponentComponent implements OnInit{
   ngOnInit(): void {
     this.mascotas = this.mascotasService.mascotas;
   }
-
 
   eliminar_mascota(){
     this.mascotasService.eliminar_mascota(this.indice);

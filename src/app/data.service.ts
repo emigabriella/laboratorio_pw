@@ -9,7 +9,7 @@ export class DataServices{
     constructor(private httpClient: HttpClient){}
 
     guardar_arreglo(mascotas: mascota[]){
-        this.httpClient.put('https://gabriela-ortiz-ing-79e23-default-rtdb.firebaseio.com/navidad.json', mascotas).subscribe(
+        this.httpClient.post('https://gabriela-ortiz-ing-79e23-default-rtdb.firebaseio.com/navidad.json', mascotas).subscribe(
             response => console.log("Se han guardado los cambios en firebase"),
             error=>console.log('Error: ' + error)
         );
