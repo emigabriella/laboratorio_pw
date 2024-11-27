@@ -7,11 +7,11 @@ import { DataServices } from "./data.service";
   providedIn: 'root'
 })
 export class mascotasService{
- /* mascotas: mascota []=[
+ mascotas: mascota []=[
     new mascota('Rosa Carrillo','Lotificacion Florencia',12345678,'rosa@gmail.com','hachy','perro',5,'husky'),
     new mascota('Roberto Vasquez','Psj. los manguitos',12345678,'rvasquez@gmail.com','lobo','perro',3,'akita')
-  ];*/
-mascotas : mascota[]=[];
+  ];
+/*mascotas : mascota[]=[];*/
 
 
 

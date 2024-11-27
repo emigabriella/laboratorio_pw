@@ -37,8 +37,8 @@
             <td>{{ mascotaLista.edad }}</td>
             <td>{{ mascotaLista.raza }}</td>
             <td>
-              <a class="btn btn-outline-warning" [routerLink]="['actualizar', indice]" [queryParams]="{accion: '1'}">Actualizar</a>
-              <a class="btn btn-outline-danger ml-1" [routerLink]="['eliminar', indice]" [queryParams]="{accion: '2'}">Eliminar</a>
+              <a class="btn btn-outline-warning" [routerLink]="['actualizar', indice]">Actualizar</a>
+              <a class="btn btn-outline-danger ml-1" [routerLink]="['eliminar', indice]">Eliminar</a>
             </td>
           </tr>
         </tbody>

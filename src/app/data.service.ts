@@ -22,7 +22,7 @@ export class DataServices{
     actualizar_posicion(indice: number, mascota: mascota){
         let url = "https://gabriela-ortiz-ing-79e23-default-rtdb.firebaseio.com/navidad/" + indice + ".json";
 
-        this.httpClient.put(url, mascota).subscribe(
+        this.httpClient.post(url, mascota).subscribe(
             response =>console.log("Se ha actualizado datos de " + response),
             error =>console.log("Error: "+ error)
         );

@@ -50,18 +50,14 @@ export class ActualizarComponentComponent implements OnInit{
     this.cuadro_raza=mascota.raza;
   }
 
-  accion_mascota(){
-    if(this.accion == 1){
+  actualizar_mascota(){
     let miMascota = new mascota(this.cuadro_n_dueno, this.cuadro_direccion, this.cuadro_numero,
     this.cuadro_correo, this.cuadro_n_mascota, this.cuadro_tipo_mascota, this.cuadro_edad,
     this.cuadro_raza);
 
     this.mascotasService.actualizar_mascota(this.indice, miMascota);
-}else {
-  this.mascotasService.eliminar_mascota(this.indice);
-}
-    setTimeout(() =>{
+
+
       this.router.navigate(['']);
-    }, 500);
-  }
+}
 }
